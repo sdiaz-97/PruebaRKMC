@@ -1,5 +1,4 @@
 import cors from 'cors';
-// import connectDB from './utils/database';
 import express from 'express';
 import apiRoutes from './routers/index.routes.js'; 
 
@@ -10,6 +9,5 @@ app.use(express.json());
 
 app.use('/', apiRoutes);
 
-// connectDB()
 
 export default app;

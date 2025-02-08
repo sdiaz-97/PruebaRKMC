@@ -36,7 +36,6 @@ const Users = () => {
   const [loadingRegister, setLoadingRegister] = useState(false);
   const [form] = Form.useForm();
 
-
   useEffect(() => {
     fetchUsers();
   }, [page, limit, search]);

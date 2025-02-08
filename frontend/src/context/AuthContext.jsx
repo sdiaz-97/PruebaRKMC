@@ -1,11 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 
-
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
-    // Intenta recuperar el usuario del localStorage al iniciar
     const storedUser = localStorage.getItem("user");
     return storedUser ? JSON.parse(storedUser) : null;
   });
@@ -13,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(false); // Marcar como cargado una vez que el efecto se ejecuta
+    setLoading(false);
   }, []);
 
   const login = (userData) => {

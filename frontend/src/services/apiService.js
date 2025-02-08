@@ -2,7 +2,6 @@ import axios from "axios";
 
 const BASE_URL = "http://localhost:5000";
 
-// Crear la instancia de Axios
 const api = axios.create({
   baseURL: BASE_URL,
   headers: {
@@ -10,9 +9,8 @@ const api = axios.create({
   },
 });
 
-// Interceptor para manejar errores de autenticación
 api.interceptors.response.use(
-  (response) => response, // Si la respuesta es correcta, se retorna
+  (response) => response,
   (error) => {
     if (error.response && error.response.status === 401) {
       console.error("No autorizado. Redirigiendo al home...");
@@ -36,7 +34,7 @@ const request = async (method, endpoint, data = null, headers = {}) => {
   let body = {
     method,
     url: endpoint,
-    headers
+    headers,
   };
 
   if (data) {
@@ -55,7 +53,6 @@ const request = async (method, endpoint, data = null, headers = {}) => {
   }
 };
 
-// Exportar los métodos de API
 export const apiService = {
   get: (endpoint, headers = {}) => request("GET", endpoint, null, headers),
   post: (endpoint, data, headers = {}) =>
