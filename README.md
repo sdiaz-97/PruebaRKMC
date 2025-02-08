@@ -13,7 +13,7 @@ Al iniciar la aplicación, se crea automáticamente un usuario administrador:
 - **Contraseña**: `admin`
 
 El sistema implementa **JWT** para la autenticación y autorización de usuarios,  
-diferenciando entre administradores y usuarios normales para el acceso a rutas específicas.  
+diferenciando entre administradores y empleados para el acceso a rutas específicas.  
 
 ## Arquitectura del Proyecto
 
@@ -24,16 +24,16 @@ garantizando un código limpio, mantenible y escalable.
 
 ## Instalación y Ejecución
 
-### 📌 Requisitos previos
+### Requisitos previos
 
 - **Docker** y **Docker Compose**  
 
-### ⚡ Pasos para ejecutar la aplicación
+### Pasos para ejecutar la aplicación
 
 1. **Clonar el repositorio**  
    ```sh
-   git clone <URL_DEL_REPOSITORIO>
-   cd <NOMBRE_DEL_PROYECTO>
+   git clone https://github.com/sdiaz-97/PruebaRKMC.git
+   cd PruebaRKMC
 
 2. **Clonar el repositorio**  
    ```sh
