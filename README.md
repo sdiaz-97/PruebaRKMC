@@ -89,22 +89,22 @@ END $$;
 
 ## Mejores Prácticas
 
-# Arquitectura Modular: Separación de responsabilidades en backend y frontend dentro de un monolito bien estructurado.
+Arquitectura Modular: Separación de responsabilidades en backend y frontend dentro de un monolito bien estructurado.
 
-# Seguridad: Uso de JWT para autenticación y validación de roles.
+Seguridad: Uso de JWT para autenticación y validación de roles.
 
-# Docker: Simplifica la instalación y despliegue del proyecto.
+Docker: Simplifica la instalación y despliegue del proyecto.
 
-# Prisma ORM: Evita inyecciones SQL y facilita la gestión de la base de datos.
+prisma ORM: Evita inyecciones SQL y facilita la gestión de la base de datos.
 
-# Uso de Ant Design: Diseño UI moderno y estructurado.
+ Uso de Ant Design: Diseño UI moderno y estructurado.
 
 ## Seguridad
 
-# Autenticación y Autorización: Implementación de JWT para restringir accesos.
+Autenticación y Autorización: Implementación de JWT para restringir accesos.
 
-# Cifrado de Contraseñas: Se usa bcrypt para almacenar contraseñas de manera segura.
+Cifrado de Contraseñas: Se usa bcrypt para almacenar contraseñas de manera segura.
 
-# Protección contra SQL Injection: Prisma ORM maneja consultas seguras automáticamente.
+Protección contra SQL Injection: Prisma ORM maneja consultas seguras automáticamente.
 
-# Control de Acceso: Validaciones de roles para proteger endpoints.
+Control de Acceso: Validaciones de roles para proteger endpoints.
