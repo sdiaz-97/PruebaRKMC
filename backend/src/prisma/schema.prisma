@@ -1,0 +1,38 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://admin:admin@db:5432/DBKRMC"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model KrRole {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  users KrUser[]
+}
+
+model KrUser {
+  id        Int    @id @default(autoincrement())
+  name      String
+  email     String @unique
+  password  String
+  roleId    Int
+  entryDate DateTime?
+  salary    Int?
+  requests  KrRequest[]
+  isActive  Boolean  
+  role      KrRole   @relation(fields: [roleId], references: [id])
+}
+
+model KrRequest {
+  id          Int      @unique @id @default(autoincrement())
+  employeeId  Int
+  code        String
+  description String
+  resume      String
+  createdAt   DateTime @default(now())
+  isActive    Boolean
+  employee    KrUser @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+}

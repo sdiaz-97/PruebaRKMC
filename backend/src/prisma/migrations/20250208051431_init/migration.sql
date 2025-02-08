@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "KrUser" ALTER COLUMN "isActive" DROP DEFAULT;
